@@ -1,0 +1,94 @@
+﻿body {
+    padding-top: 50px !important
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: none;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+label {
+    margin-bottom: 0px;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+.input-group-addon {
+    border-color: transparent;
+    width: 210px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0px;
+    float: left;
+    text-align: right;
+}
+.form-control {
+    padding: 0px;
+    border-color: transparent;
+}
+.captcha {
+    background-color: transparent;
+    height: auto;
+    padding-left: 0px;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* inputs*/
+
+.select-day {
+    width: 42px;
+}
+.select-month {
+    width: 90px;
+}
+.select-year {
+    width: 60px;
+}
+.register-textbox {
+    width:200px;
+}

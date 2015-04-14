@@ -1,0 +1,77 @@
+﻿@model TestApp01.Model.ViewModels.UserView
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Areas/Default/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Register", "User", FormMethod.Post, new { @class = "form-horizontal"}))
+{
+    <div class="container">
+        <fieldset>
+            <legend>Регистрация</legend>
+            <div class="input-group">
+                <label class="input-group-addon" for="FirstName">
+                    First Name
+                </label>
+                <div class="form-control">
+                    @Html.ValidationMessage("Name")
+                    @Html.TextBox("Name", Model.Name, new { @class="register-textbox" })
+                </div>
+            </div>
+            <div class="input-group">
+                <label class="input-group-addon" for="Email">
+                    Email
+                </label>
+                <div class="form-control">
+                    @Html.ValidationMessage("Email")
+                    @Html.TextBox("Email", Model.Email, new { @class = "register-textbox" })
+                </div>
+            </div>
+            <div class="input-group">
+                <label class="input-group-addon" for="FirstName">
+                    Birth date
+                </label>
+                <div class="form-control">
+                    @Html.DropDownList("BirthdayDay", Model.BirthdayDaySelectList, new { @class="select-day"})
+                    @Html.DropDownList("BirthdayMonth", Model.BirthdayMonthSelectList, new { @class = "select-month" })
+                    @Html.DropDownList("BirthdayYear", Model.BirthdayYearSelectList, new { @class = "select-year" })
+                </div>
+            </div>
+            <div class="input-group">
+                <label class="input-group-addon" for="FirstName">
+                    Password
+                </label>
+                <div class="form-control">
+                    @Html.ValidationMessage("Password")
+                    @Html.Password("Password", Model.Password, new { @class = "register-textbox" })
+                </div>
+            </div>
+            <div class="input-group">
+                <label class="input-group-addon" for="FirstName">
+                    Confirm Password
+                </label>
+                <div class="form-control">
+                    @Html.ValidationMessage("ConfirmPassword")
+                    @Html.Password("ConfirmPassword", Model.ConfirmPassword, new { @class = "register-textbox" })
+                </div>
+            </div>
+            <div class="input-group">
+                <label class="input-group-addon captcha" for="FirstName">
+                    <img src="@Url.Action("Captcha", "User")" alt="captcha" />
+                </label>
+                <div class="form-control">
+                    @Html.ValidationMessage("Captcha")
+                    @Html.TextBox("Captcha", Model.Captcha, new { @class = "register-textbox" })
+                </div>
+            </div>
+            @Html.ValidationSummary()
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                    Register
+                </button>
+                @Html.ActionLink("Cancel", "Index", null, null, new { @class = "btn btn-default" })
+            </div>
+        </fieldset>
+    </div>
+    
+}

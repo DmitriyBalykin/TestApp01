@@ -41,3 +41,12 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+DataKnowledge/bin/*
+DataKnowledge/obj/*
+TestApp01/logs/*
+TestApp01/bin/*
+TestApp01/obj/*
+TestAppConsole/logs/*
+TestAppConsole/bin/*
+TestAppConsole/obj/*
+packages

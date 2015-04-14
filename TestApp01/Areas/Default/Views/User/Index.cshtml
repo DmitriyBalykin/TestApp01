@@ -1,0 +1,29 @@
+﻿@model IList<TestApp01.Model.User>
+
+@{
+    ViewBag.Title = "Users";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Users</h2>
+
+<p>
+    @foreach (var user in Model)
+    {
+        <div class="item">
+            <span class="id">
+                @user.Id
+            </span>
+            <span class="name">
+                @user.Name
+            </span>
+            <span class="Date">
+                @user.AddedDate
+            </span>
+            <span class="email">
+                @user.Email
+            </span>
+            <input type="button" onclick="location.href='User/Activate/@user.Id'" value="@user.ActivateAction" title="@user.ActivateAction" />
+        </div>
+    }
+</p>

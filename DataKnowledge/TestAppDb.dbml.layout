@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="TestAppDb">
+  <DataContextMoniker Name="/TestAppDbDataContext" />
+  <nestedChildShapes>
+    <classShape Id="92ac69dc-3acb-4e5c-af52-528330c0aa65" absoluteBounds="0.75, 0.875, 2, 1.3862939453124998">
+      <DataClassMoniker Name="/TestAppDbDataContext/Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="90770445-578d-45ab-9317-2f92fd7f700a" absoluteBounds="0.765, 1.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1a1f8aa4-6c14-40be-82d1-7b26213f1c08" absoluteBounds="3.5, 0.875, 2, 1.3862939453124998">
+      <DataClassMoniker Name="/TestAppDbDataContext/UserRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="32d60307-727b-4579-9677-9433b3bfba13" absoluteBounds="3.515, 1.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="345da0c8-ba84-4196-a439-bb7b5e4aedd3" absoluteBounds="0.75, 5.125, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/TestAppDbDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b04022b-519a-4a4f-8c39-c524591222b2" absoluteBounds="0.765, 5.585, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.56814697265625); (3.5 : 1.56814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TestAppDbDataContext/Role/Role_UserRole" />
+      <nodes>
+        <classShapeMoniker Id="92ac69dc-3acb-4e5c-af52-528330c0aa65" />
+        <classShapeMoniker Id="1a1f8aa4-6c14-40be-82d1-7b26213f1c08" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.49120198567708); (4.5 : 6.49120198567708); (4.5 : 2.2612939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/TestAppDbDataContext/User/User_UserRole" />
+      <nodes>
+        <classShapeMoniker Id="345da0c8-ba84-4196-a439-bb7b5e4aedd3" />
+        <classShapeMoniker Id="1a1f8aa4-6c14-40be-82d1-7b26213f1c08" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

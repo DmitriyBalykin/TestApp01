@@ -1,0 +1,19 @@
+﻿@model TestApp01.Model.User
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Areas/Default/Views/Shared/_Layout.cshtml";
+}
+@if (Model != null)
+{
+    <h2>Index</h2>
+    <p>
+        <div class="menu">
+            <ul>
+                <li><a href="@Url.Action("Index","Role")">Роли</a></li>
+                <li>@Html.ActionLink("Новый пользователь", "Register", "User")</li>
+                <li>@Html.ActionLink("Пользователи", "Index", "User")</li>
+                <li>@Html.ActionLink("Активированные пользователи", "Activated", "User")</li>
+            </ul>
+        </div>
+    </p>
+}

@@ -1,0 +1,28 @@
+﻿@model IList<TestApp01.Model.User>
+
+@{
+    ViewBag.Title = "Activated users";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Activated users</h2>
+
+<p>
+    @foreach (var user in Model)
+    {
+        <div class="item">
+            <span class="id">
+                @user.Id
+            </span>
+            <span class="name">
+                @user.Name
+            </span>
+            <span class="Date">
+                @user.AddedDate
+            </span>
+            <span class="email">
+                @user.Email
+            </span>
+        </div>
+    }
+</p>
