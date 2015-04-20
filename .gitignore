@@ -49,4 +49,10 @@ TestApp01/obj/*
 TestAppConsole/logs/*
 TestAppConsole/bin/*
 TestAppConsole/obj/*
+TestApp01.Model/bin/*
+TestApp01.Model/obj/*
+TestApp01.Model/logs/*
+TestApp01.Tools/bin/*
+TestApp01.Tools/obj/*
+TestApp01.Tools/logs/*
 packages
