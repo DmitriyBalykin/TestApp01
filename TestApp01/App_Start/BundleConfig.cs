@@ -32,7 +32,7 @@ namespace TestApp01
             bundles.Add(new StyleBundle("~/Content/css/jqueryui")
                 .Include("~/Content/css/jquery-ui*"));
 
-            BundleTable.EnableOptimizations = true;
+            //BundleTable.EnableOptimizations = true;
         }
     }
 }

@@ -9,10 +9,10 @@
 
     function initLoginPopup(modal) {
         $("#LoginButton").click(function () {
-            $().ajax({
+            $.ajax({
                 type: "POST",
                 url: "/Login/Ajax",
-                data: $("LoginForm").serialize(),
+                data: $("#LoginForm").serialize(),
                 success: function (data) {
                     showModalData(data);
                     initLoginPopup(modal);
@@ -27,7 +27,7 @@
         popupWrapper.empty();
         popupWrapper.html(data);
         var popup = $(".modal", popupWrapper);
-        $(".modal", popupWrapper).modal();
+        $(".modal", popupWrapper).modal("show");
         if (callback != undefined) {
             callback(popup);
         }
@@ -48,10 +48,10 @@
             }
         });
     }
-
-    var common = null;
-    $().ready(function () {
-        common = new Common();
-        common.init();
-    });
 }
+
+var common = null;
+$().ready(function () {
+    common = new Common();
+    common.init();
+});

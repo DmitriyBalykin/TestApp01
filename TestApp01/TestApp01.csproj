@@ -169,8 +169,11 @@
     <Compile Include="Global\Auth\IUserProvider.cs" />
     <Compile Include="Global\Auth\UserIdentity.cs" />
     <Compile Include="Global\Auth\UserProvider.cs" />
+    <Compile Include="Global\SearchEngine.cs" />
+    <Compile Include="Helper\PageHelper.cs" />
     <Compile Include="Mapper\CommonMapper.cs" />
     <Compile Include="Mapper\IMapper.cs" />
+    <Compile Include="Models\Info\PageableData.cs" />
     <Compile Include="Models\ViewModels\LoginView.cs" />
     <Compile Include="Models\ViewModels\UserView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
