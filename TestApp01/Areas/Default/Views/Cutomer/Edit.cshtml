@@ -1,0 +1,41 @@
+﻿@model TestApp01.Models.Info.Customer
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Default/Views/Shared/_Layuot.cshtml";
+}
+
+@section scripts
+{
+    @Scripts.Render("~/Script/Default/customer-edit.js")
+}
+
+@using (Html.BeginForm("Edit", "Customer", FormMethod.Post, new { @class="form-horizontal"}))
+{
+    <fieldset>
+        @Html.Hidden("ID", Model.ID)
+        <div class="input-group">
+            <label class="input-group-addon" for="Email">
+                Name
+            </label>
+            <div class="form-control">
+                @Html.TextBox("Name", Model.Name, new { @class="input-large"})
+                @Html.ValidationMessage("Name")
+            </div>
+        </div>
+        <div id="OwnershipListWrapper">
+            <div class="btn" id="AddOwnerShip">
+                Добавить
+            </div>
+            @foreach(var keyValuePair in Model.Ownerships)
+            {
+                @Html.Partial("OwnershipItem",keyValuePair)
+            }
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">
+                Ok
+            </button>
+        </div>
+    </fieldset>
+}

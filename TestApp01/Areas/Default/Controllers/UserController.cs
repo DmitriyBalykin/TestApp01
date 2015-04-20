@@ -7,6 +7,8 @@ using System.Web.Mvc;
 using TestApp01.Controllers;
 using TestApp01.Model;
 using TestApp01.Model.ViewModels;
+using TestApp01.Models.Info;
+using TestApp01.Search;
 using TestApp01.Tools;
 
 namespace TestApp01.Areas.Default.Controllers
@@ -15,10 +17,20 @@ namespace TestApp01.Areas.Default.Controllers
     {
         //
         // GET: /User/
-        public ActionResult Index()
+        public ActionResult Index(int page = 1, string searchString = null)
         {
-            var users = Repository.Users.ToList();
-            return View(users);
+            ViewBag.Search = searchString;
+            if(!string.IsNullOrWhiteSpace(searchString))
+            {
+                var list = SearchEngine.Search(searchString, Repository.Users).AsQueryable();
+                var data = new PageableData<User>(list, page, 5);
+                return View(data);
+            }
+            else
+            {
+                var data = new PageableData<User>(Repository.Users, page, 5);
+                return View(data);
+            }
         }
         public ActionResult Activated()
         {
